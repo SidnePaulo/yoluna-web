@@ -1,1 +1,50 @@
 
+:root {
+  --bg-main: #F6F3EE;
+  --bg-section: #E8E3D9;
+  --rose: #C7A6A1;
+  --sage: #A3B18A;
+  --text-dark: #2F2F2F;
+  --text-soft: #6F6F6F;
+  --accent: #B08968;
+}
+body {
+  margin:0;
+  padding:0;
+  background: var(--bg-main);
+  font-family: 'Jost', sans-serif;
+  color: var(--text-dark);
+}
+nav {
+  position:fixed;
+  top:0;left:0;right:0;
+  height:80px;
+  background: rgba(246,243,238,0.8);
+  backdrop-filter:blur(6px);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0 48px;
+  border-bottom:1px solid rgba(176,137,104,0.3);
+}
+.nav-links a {
+  color: var(--text-dark);
+  text-decoration:none;
+  font-size:13px;
+  letter-spacing:0.1em;
+}
+section {
+  padding:100px 48px;
+  background: var(--bg-main);
+}
+.service-card {
+  background: var(--bg-section);
+  padding:40px;
+  border-radius:12px;
+  border:1px solid rgba(176,137,104,0.3);
+}
+footer {
+  background:#E8E3D9;
+  padding:60px;
+  border-top:1px solid rgba(176,137,104,0.3);
+}

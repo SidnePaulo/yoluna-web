@@ -1,13 +1,13 @@
 
     :root {
-      --gold: #C9A84C;
-      --gold-light: #E8C97A;
+      --gold: #B08968;
+      --gold-light: #C7A6A1;
       --gold-pale: #F5E9C8;
-      --dark: #0D0D0F;
-      --dark-mid: #1A1A1E;
-      --dark-card: #141418;
-      --cream: #F5F0E8;
-      --text-muted: #8A8070;
+      --dark: #F6F3EE;
+      --dark-mid: #E8E3D9;
+      --dark-card: #E8E3D9;
+      --cream: #F6F3EE;
+      --text-muted: #2F2F2F;
       --border: rgba(201,168,76,0.2);
     }
 

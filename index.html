@@ -21,11 +21,11 @@
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-    body { background: var(--cream); color: var(--text); font-family: 'Jost', sans-serif; font-weight: 300; overflow-x: hidden; }
+    body { background: #F2EDE4; color: var(--text); font-family: 'Jost', sans-serif; font-weight: 300; overflow-x: hidden; }
 
     /* NAV */
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 56px; height: 80px; background: transparent; transition: background 0.5s, box-shadow 0.5s; }
-    nav.scrolled { background: rgba(250,247,242,0.97); box-shadow: 0 1px 0 var(--border); }
+    nav.scrolled { background: rgba(240,235,225,0.98); box-shadow: 0 1px 0 var(--border); }
     .nav-logo svg { height: 52px; }
     .nav-links { display: flex; gap: 40px; list-style: none; }
     .nav-links a { font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--white); text-decoration: none; opacity: 0.85; transition: color 0.3s, opacity 0.3s; }
@@ -79,10 +79,10 @@
     .section-body { font-size: 15px; line-height: 1.9; color: var(--text-mid); max-width: 540px; }
 
     /* ABOUT */
-    #nosotros { padding: 100px 56px; background: var(--white); }
+    #nosotros { padding: 100px 56px; background: #EDE6DA; }
     .about-inner { max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
     .about-image-wrap { position: relative; }
-    .about-placeholder { aspect-ratio: 3/4; background: var(--cream-dark); border: 1px solid var(--border); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; }
+    .about-placeholder { aspect-ratio: 3/4; background: #E0D8CA; border: 1px solid var(--border); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; }
     .about-placeholder .ph { font-size: 52px; opacity: 0.2; }
     .about-placeholder p { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-light); opacity: 0.6; }
     .about-badge { position: absolute; bottom: -20px; right: -20px; width: 100px; height: 100px; border-radius: 50%; background: var(--sage-dark); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 12px; }
@@ -98,9 +98,9 @@
     .services-header { text-align: center; margin-bottom: 60px; }
     .services-header .section-body { margin: 0 auto; text-align: center; }
     .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1px; background: var(--beige); border: 1px solid var(--beige); }
-    .service-card { background: var(--white); padding: 36px 32px; position: relative; overflow: hidden; transition: background 0.4s; }
+    .service-card { background: #EDE6DA; padding: 36px 32px; position: relative; overflow: hidden; transition: background 0.4s; }
     .service-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: var(--sage-dark); transform: scaleX(0); transform-origin: left; transition: transform 0.4s ease; }
-    .service-card:hover { background: var(--cream); }
+    .service-card:hover { background: #E4DAC8; }
     .service-card:hover::after { transform: scaleX(1); }
     .service-number { font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 300; color: var(--sage-light); line-height: 1; margin-bottom: 14px; }
     .service-name { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 400; color: var(--text); margin-bottom: 10px; line-height: 1.2; }
@@ -116,34 +116,35 @@
     .btn-online:hover { background: var(--cream); }
 
     /* CONTACT */
-    #contacto { padding: 100px 56px; background: var(--white); }
+    #contacto { padding: 100px 56px; background: #EDE6DA; }
     .contact-inner { max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
     .contact-info { display: flex; flex-direction: column; gap: 28px; margin-top: 36px; }
     .contact-item { display: flex; gap: 16px; align-items: flex-start; }
-    .contact-icon { width: 42px; height: 42px; background: var(--cream); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--sage-dark); }
+    .contact-icon { width: 42px; height: 42px; background: #E0D8CA; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--sage-dark); }
     .contact-label { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-light); margin-bottom: 4px; }
     .contact-value { font-size: 14px; color: var(--text-mid); line-height: 1.7; }
     .contact-value a { color: var(--text-mid); text-decoration: none; }
     .contact-value a:hover { color: var(--sage-dark); }
     .wa-link { display: inline-flex; align-items: center; gap: 5px; color: var(--sage-dark) !important; font-size: 13px; margin-top: 4px; }
     .social-links { display: flex; gap: 10px; margin-top: 28px; }
-    .social-link { width: 40px; height: 40px; background: var(--cream); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; color: var(--text-light); text-decoration: none; transition: background 0.3s, color 0.3s, border-color 0.3s; }
+    .social-link { width: 40px; height: 40px; background: #E0D8CA; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; color: var(--text-light); text-decoration: none; transition: background 0.3s, color 0.3s, border-color 0.3s; }
     .social-link:hover { background: var(--sage-dark); color: var(--white); border-color: var(--sage-dark); }
     .contact-form { display: flex; flex-direction: column; gap: 18px; }
     .form-group { display: flex; flex-direction: column; gap: 7px; }
     .form-group label { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-light); }
-    .form-group input, .form-group textarea, .form-group select { background: var(--cream); border: 1px solid var(--border); color: var(--text); font-family: 'Jost', sans-serif; font-size: 14px; font-weight: 300; padding: 13px 16px; outline: none; transition: border-color 0.3s; resize: vertical; }
+    .form-group input, .form-group textarea, .form-group select { background: #E0D8CA; border: 1px solid var(--border); color: var(--text); font-family: 'Jost', sans-serif; font-size: 14px; font-weight: 300; padding: 13px 16px; outline: none; transition: border-color 0.3s; resize: vertical; }
     .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--sage-dark); }
-    .form-group select option { background: var(--cream); }
+    .form-group select option { background: #E0D8CA; }
     .form-group textarea { min-height: 110px; }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
     .btn-form { background: var(--sage-dark); color: var(--white); font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; padding: 16px; border: none; cursor: pointer; transition: background 0.3s; }
     .btn-form:hover { background: #4A6B4A; }
 
     /* MAP */
-    .map-section { height: 280px; background: var(--cream-dark); border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 12px; }
-    .map-section p { font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-light); }
-    .map-section a { color: var(--sage-dark); text-decoration: none; font-size: 13px; }
+    .map-section { position: relative; height: 380px; border-top: 1px solid var(--border); }
+    .map-section iframe { width: 100%; height: 100%; border: none; display: block; }
+    .map-overlay-btn { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); background: var(--sage-dark); color: var(--white); font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; padding: 13px 28px; text-decoration: none; transition: background 0.3s; white-space: nowrap; z-index: 2; }
+    .map-overlay-btn:hover { background: #4A6B4A; }
 
     /* FOOTER */
     footer { background: var(--text); padding: 64px 56px 32px; }
@@ -358,14 +359,14 @@
         </div>
         <div class="contact-item">
           <div class="contact-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-          <div><div class="contact-label">Email</div><div class="contact-value"><a href="mailto:sidne@hotmail.es">sidne@hotmail.es</a></div></div>
+          <div><div class="contact-label">Email</div><div class="contact-value"><a href="/cdn-cgi/l/email-protection#04776d606a61446c6b7069656d682a6177"><span class="__cf_email__" data-cfemail="7c0f151812193c141308111d151052190f">[email&#160;protected]</span></a></div></div>
         </div>
       </div>
       <div class="social-links">
         <a class="social-link" href="https://wa.me/34611419266" target="_blank" title="WhatsApp">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.99 2C6.479 2 2 6.478 2 11.99a9.97 9.97 0 001.367 5.072L2 22l5.087-1.337A9.946 9.946 0 0011.99 22c5.51 0 9.988-4.478 9.988-9.989C21.978 6.48 17.5 2 11.99 2z"/></svg>
         </a>
-        <a class="social-link" href="mailto:sidne@hotmail.es" title="Email">
+        <a class="social-link" href="/cdn-cgi/l/email-protection#9be8f2fff5fedbf3f4eff6faf2f7b5fee8" title="Email">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
         </a>
       </div>
@@ -404,9 +405,16 @@
 
 <!-- MAP -->
 <div class="map-section">
-  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#8A9E8A" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-  <p>Calle de las Pedroñeras, 30 — Hortaleza, Madrid</p>
-  <a href="https://maps.google.com/?q=Calle+de+las+Pedroneras+30+Hortaleza+Madrid" target="_blank">Ver en Google Maps →</a>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3034.5!2d-3.6527!3d40.4739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422f3b6b6b6b6b%3A0x0!2sCalle+de+las+Pedroneras+30%2C+Hortaleza%2C+Madrid!5e0!3m2!1ses!2ses!4v1"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    title="Ubicación Yoluna Hortaleza">
+  </iframe>
+  <a class="map-overlay-btn" href="https://maps.google.com/?q=Calle+de+las+Pedroneras+30+Hortaleza+Madrid" target="_blank">
+    Cómo llegar →
+  </a>
 </div>
 
 <!-- FOOTER -->
@@ -437,7 +445,7 @@
       <h4>Contacto</h4>
       <ul>
         <li><a href="tel:+34611419266">611 419 266</a></li>
-        <li><a href="mailto:sidne@hotmail.es">sidne@hotmail.es</a></li>
+        <li><a href="/cdn-cgi/l/email-protection#52213b363c37123a3d263f333b3e7c3721"><span class="__cf_email__" data-cfemail="05766c616b60456d6a7168646c692b6076">[email&#160;protected]</span></a></li>
         <li><a href="https://wa.me/34611419266">WhatsApp</a></li>
         <li><a href="#contacto">Formulario</a></li>
       </ul>
@@ -449,7 +457,7 @@
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   const navbar = document.getElementById('navbar');
   window.addEventListener('scroll', () => {
     navbar.classList.toggle('scrolled', window.scrollY > 50);
@@ -461,17 +469,4 @@
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
-    });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-  function handleForm(e) {
-    const btn = e.target;
-    btn.textContent = '✓ Mensaje enviado';
-    btn.style.background = '#4A6B4A';
-    setTimeout(() => { btn.textContent = 'Enviar mensaje'; btn.style.background = ''; }, 3000);
-  }
-</script>
-</body>
-</html>
+      if (e.isIntersecting) { e.target.classList.add('visible'); o

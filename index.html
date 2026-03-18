@@ -24,19 +24,19 @@
     body { background: #F2EDE4; color: var(--text); font-family: 'Jost', sans-serif; font-weight: 300; overflow-x: hidden; }
 
     /* NAV */
-    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 56px; height: 80px; background: transparent; transition: background 0.5s, box-shadow 0.5s; }
-    nav.scrolled { background: rgba(240,235,225,0.98); box-shadow: 0 1px 0 var(--border); }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 56px; height: 80px; background: linear-gradient(160deg, #3D5C3D 0%, #5C7A5C 60%, #8A9E8A 100%); transition: background 0.5s, box-shadow 0.5s; }
+    nav.scrolled { background: #4A6B4A; box-shadow: 0 2px 12px rgba(60,90,60,0.25); }
     .nav-logo svg { height: 52px; }
     .nav-links { display: flex; gap: 40px; list-style: none; }
     .nav-links a { font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--white); text-decoration: none; opacity: 0.85; transition: color 0.3s, opacity 0.3s; }
-    nav.scrolled .nav-links a { color: var(--text-mid); }
-    .nav-links a:hover { opacity: 1; color: var(--sage-dark) !important; }
+    nav.scrolled .nav-links a { color: var(--white); }
+    .nav-links a:hover { opacity: 1; color: var(--sage-light) !important; }
     .nav-cta { font-size: 11px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--white); text-decoration: none; border: 1px solid rgba(255,255,255,0.6); padding: 10px 24px; transition: background 0.3s, color 0.3s, border-color 0.3s; }
-    nav.scrolled .nav-cta { color: var(--sage-dark); border-color: var(--sage-dark); }
-    .nav-cta:hover { background: var(--sage-dark); color: var(--white) !important; border-color: var(--sage-dark); }
+    nav.scrolled .nav-cta { color: var(--white); border-color: rgba(255,255,255,0.6); }
+    .nav-cta:hover { background: rgba(255,255,255,0.15); color: var(--white) !important; }
     .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
     .hamburger span { display: block; width: 22px; height: 1.5px; background: var(--white); transition: background 0.3s; }
-    nav.scrolled .hamburger span { background: var(--text); }
+    nav.scrolled .hamburger span { background: var(--white); }
 
     /* MOBILE MENU */
     .mobile-menu { display: none; position: fixed; inset: 0; z-index: 99; background: var(--cream); flex-direction: column; align-items: center; justify-content: center; gap: 28px; }
@@ -141,10 +141,13 @@
     .btn-form:hover { background: #4A6B4A; }
 
     /* MAP */
-    .map-section { position: relative; height: 380px; border-top: 1px solid var(--border); }
-    .map-section iframe { width: 100%; height: 100%; border: none; display: block; }
-    .map-overlay-btn { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); background: var(--sage-dark); color: var(--white); font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; padding: 13px 28px; text-decoration: none; transition: background 0.3s; white-space: nowrap; z-index: 2; }
+    .map-section { position: relative; padding: 56px 56px 64px; background: #EDE6DA; border-top: 1px solid var(--border); display: flex; flex-direction: column; align-items: center; gap: 0; }
+    .map-label { font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--sage-dark); margin-bottom: 20px; }
+    .map-wrap { width: 100%; max-width: 640px; height: 300px; position: relative; box-shadow: 0 4px 24px rgba(60,80,60,0.12); }
+    .map-wrap iframe { width: 100%; height: 100%; border: none; display: block; }
+    .map-overlay-btn { display: inline-block; margin-top: 20px; background: var(--sage-dark); color: var(--white); font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; padding: 13px 28px; text-decoration: none; transition: background 0.3s; }
     .map-overlay-btn:hover { background: #4A6B4A; }
+    @media (max-width: 768px) { .map-section { padding: 40px 20px 48px; } .map-wrap { height: 240px; } }
 
     /* FOOTER */
     footer { background: var(--text); padding: 64px 56px 32px; }
@@ -405,15 +408,18 @@
 
 <!-- MAP -->
 <div class="map-section">
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3034.5!2d-3.6527!3d40.4739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422f3b6b6b6b6b%3A0x0!2sCalle+de+las+Pedroneras+30%2C+Hortaleza%2C+Madrid!5e0!3m2!1ses!2ses!4v1"
-    allowfullscreen=""
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade"
-    title="Ubicación Yoluna Hortaleza">
-  </iframe>
+  <p class="map-label">Cómo llegar</p>
+  <div class="map-wrap">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3034.5!2d-3.6527!3d40.4739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422f3b6b6b6b6b%3A0x0!2sCalle+de+las+Pedroneras+30%2C+Hortaleza%2C+Madrid!5e0!3m2!1ses!2ses!4v1"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Ubicación Yoluna Hortaleza">
+    </iframe>
+  </div>
   <a class="map-overlay-btn" href="https://maps.google.com/?q=Calle+de+las+Pedroneras+30+Hortaleza+Madrid" target="_blank">
-    Cómo llegar →
+    Abrir en Google Maps →
   </a>
 </div>
 

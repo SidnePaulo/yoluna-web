@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yoluna Hortaleza — Yoga & Terapias Holísticas</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Espacio de bienestar en Hortaleza, Madrid. Ofrecemos yoga terapéutico, terapias holísticas, masajes relajantes y descontracturantes. Sesiones presenciales y online."/>
+  <meta name="keywords" content="yoga terapéutico, terapias holísticas, masajes, Hortaleza, Madrid, bienestar, meditación, quiromasaje"/>
+  <meta name="author" content="Yoluna Hortaleza"/>
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Yoluna Hortaleza — Yoga & Terapias Holísticas"/>
+  <meta property="og:description" content="Espacio de bienestar para cuerpo y mente en Hortaleza, Madrid. Yoga, meditación y terapias holísticas."/>
+  <meta property="og:image" content="https://yoluna.com/og-image.jpg"/> <!-- Actualizar con URL real -->
+  <meta property="og:url" content="https://yoluna.com"/> <!-- Actualizar con URL real -->
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>"/>
+  
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+  
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav id="navbar">
+  <a class="nav-logo" href="#hero">
+    <img src="logo.png" alt="Yoluna Hortaleza">
+  </a>
+  <ul class="nav-links">
+    <li><a href="#nosotros">Sobre mí</a></li>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+  <a class="nav-cta" href="#contacto">Reservar sesión</a>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Abrir menú" role="button" tabindex="0">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- ══ MOBILE MENU ══ -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="toggleMenu()" aria-label="Cerrar menú">✕</button>
+  <a href="#nosotros" onclick="toggleMenu()">Sobre mí</a>
+  <a href="#servicios" onclick="toggleMenu()">Servicios</a>
+  <a href="#contacto" onclick="toggleMenu()">Contacto</a>
+  <a href="#contacto" onclick="toggleMenu()" class="mobile-reservar">Reservar sesión</a>
+</div>
+
+<main>
+<!-- ══ HERO ══ -->
+<section id="hero">
+  <div class="hero-slider">
+    <div class="hero-slide slide-1"></div>
+    <div class="hero-slide slide-2"></div>
+    <div class="hero-slide slide-3"></div>
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="hero-ring hr1"></div>
+  <div class="hero-ring hr2"></div>
+  <div class="hero-ring hr3"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Yoga &amp; Terapias Holísticas · Hortaleza, Madrid</p>
+    <h1 class="hero-title"><em>Yoluna</em></h1>
+    <p class="hero-subtitle">Espacio de bienestar para cuerpo y mente</p>
+    <div class="hero-ornament"><div class="hero-ornament-dot"></div></div>
+    <div class="hero-actions">
+      <a class="btn-primary" href="#servicios">Ver servicios</a>
+      <a class="btn-outline" href="#contacto">Contactar</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ══ STRIP ══ -->
+<div class="intro-strip">
+  <div class="intro-stat"><div class="num">8</div><div class="label">Servicios</div></div>
+  <div class="intro-stat"><div class="num">Online</div><div class="label">Sesiones disponibles</div></div>
+  <div class="intro-stat"><div class="num">Madrid</div><div class="label">Hortaleza</div></div>
+  <div class="intro-stat"><div class="num">360°</div><div class="label">Bienestar integral</div></div>
+</div>
+
+<!-- Separador espiritual -->
+<div class="section-ornament">✦ ॐ ✦</div>
+
+<!-- ══ ABOUT ══ -->
+<section id="nosotros">
+  <div class="about-inner">
+    <div class="about-image-wrap fade-in">
+      <img src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?q=80&w=800&auto=format&fit=crop" alt="Profesora de yoga en postura de meditación" style="width:100%; display:block; aspect-ratio:3/4; object-fit:cover; border-radius: 4px;">
+      <div class="about-badge"><span>Bienestar<br>integral</span></div>
+    </div>
+
+    <div class="about-content fade-in d1">
+      <p class="section-eyebrow">Sobre mí</p>
+      <h2 class="section-title">Un espacio para <em>reconectar</em></h2>
+      <p class="section-body">Soy profesora de yoga certificada y terapeuta holística, especializada en el acompañamiento personalizado de cada persona en su camino hacia el bienestar integral.</p>
+      <blockquote class="about-quote">"El yoga no es sobre tocar los dedos de los pies, es sobre lo que aprendes en el camino hacia abajo."</blockquote>
+      <p class="section-body">Mi práctica combina el yoga terapéutico, las terapias holísticas y la meditación para ofrecer una experiencia única y transformadora, tanto presencial en Madrid como online.</p>
+      <div class="about-info">
+        <div class="about-info-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Calle de las Pedroñeras, 30 — Hortaleza, Madrid</span>
+        </div>
+        <div class="about-info-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+          <span>611 419 266 — También por WhatsApp</span>
+        </div>
+        <div class="about-info-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8m-4-4v4"/></svg>
+          <span>Sesiones presenciales y online disponibles</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Separador espiritual -->
+<div class="section-ornament">✦ ☽ ✦</div>
+
+<!-- ══ SERVICES ══ -->
+<section id="servicios">
+  <div class="services-inner">
+    <div class="services-header fade-in">
+      <p class="section-eyebrow">Lo que ofrezco</p>
+      <h2 class="section-title">Servicios &amp; <em>Terapias</em></h2>
+      <p class="section-body">Cada servicio está diseñado para acompañarte en un proceso de bienestar profundo, adaptado a tus necesidades y ritmo personal.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card fade-in"><div class="service-number">01</div><h3 class="service-name">Quiromasaje</h3><p class="service-desc">Técnica manual que trabaja sobre músculos y tejidos para aliviar tensiones, contracturas y mejorar la circulación.</p><span class="service-tag">Terapia manual</span></div>
+      <div class="service-card fade-in d1"><div class="service-number">02</div><h3 class="service-name">Terapias Holísticas</h3><p class="service-desc">Enfoque integral que trabaja cuerpo, mente y emociones como una unidad, con técnicas adaptadas a cada persona.</p><span class="service-tag">Bienestar integral</span></div>
+      <div class="service-card fade-in d2"><div class="service-number">03</div><h3 class="service-name">Yoga Terapéutico</h3><p class="service-desc">Práctica personalizada de yoga orientada a la prevención y recuperación, trabajando patologías específicas con seguridad.</p><span class="service-tag">Salud &amp; movimiento</span></div>
+      <div class="service-card fade-in"><div class="service-number">04</div><h3 class="service-name">Yoga para Principiantes</h3><p class="service-desc">Clases diseñadas para quienes se inician en el yoga, con un ritmo accesible y un entorno seguro y acogedor.</p><span class="service-tag">Para todos los niveles</span></div>
+      <div class="service-card fade-in d1"><div class="service-number">05</div><h3 class="service-name">Meditación Guiada</h3><p class="service-desc">Sesiones con técnicas de respiración y atención plena para reducir el estrés y cultivar la calma interior.</p><span class="service-tag">Mente &amp; consciencia</span></div>
+      <div class="service-card fade-in d2"><div class="service-number">06</div><h3 class="service-name">Masaje Relajante</h3><p class="service-desc">Masaje suave y envolvente que favorece la relajación profunda, reduce la ansiedad y mejora el bienestar general.</p><span class="service-tag">Relajación profunda</span></div>
+      <div class="service-card fade-in"><div class="service-number">07</div><h3 class="service-name">Masaje Descontracturante</h3><p class="service-desc">Técnica específica para liberar contracturas musculares profundas y puntos de tensión acumulada en el cuerpo.</p><span class="service-tag">Terapia muscular</span></div>
+      <div class="service-card fade-in d1"><div class="service-number">08</div><h3 class="service-name">Terapia Corporal</h3><p class="service-desc">Abordaje terapéutico que integra movimiento consciente y técnicas corporales para el equilibrio emocional y físico.</p><span class="service-tag">Integración cuerpo-mente</span></div>
+    </div>
+    <div class="online-banner fade-in">
+      <div>
+        <h3>También disponible <em>online</em></h3>
+        <p>Sesiones de yoga, meditación y terapia desde donde estés. Madrid y todo el mundo.</p>
+      </div>
+      <a class="btn-online" href="#contacto">Solicitar información</a>
+    </div>
+  </div>
+</section>
+
+<!-- Separador espiritual -->
+<div class="section-ornament">✦ ✿ ✦</div>
+
+<!-- ══ TESTIMONIOS ══ -->
+<section id="testimonios" style="padding: 100px 56px; background: var(--cream); text-align: center;">
+  <div style="max-width: 1160px; margin: 0 auto;">
+    <div class="fade-in">
+      <p class="section-eyebrow">Lo que dicen de mí</p>
+      <h2 class="section-title">Experiencias que <em>inspiran</em></h2>
+      <p class="section-body" style="margin: 0 auto 60px;">Historias reales de personas que han encontrado su equilibrio y bienestar en Yoluna.</p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
+      <div class="fade-in" style="background: var(--cream-warm); padding: 40px; border: 1px solid var(--border-rose); border-radius: 8px;">
+        <div style="color: var(--rose); font-size: 24px; margin-bottom: 16px;">★★★★★</div>
+        <p style="font-size: 15px; line-height: 1.8; color: var(--text-mid); margin-bottom: 24px; font-style: italic;">"Las sesiones de yoga terapéutico han cambiado por completo mi postura y aliviado mis dolores de espalda. Un espacio lleno de paz."</p>
+        <p style="font-family: 'Cormorant Garamond', serif; font-size: 18px; color: var(--sage-dark);">María G.</p>
+      </div>
+      <div class="fade-in d1" style="background: var(--cream-warm); padding: 40px; border: 1px solid var(--border-rose); border-radius: 8px;">
+        <div style="color: var(--rose); font-size: 24px; margin-bottom: 16px;">★★★★★</div>
+        <p style="font-size: 15px; line-height: 1.8; color: var(--text-mid); margin-bottom: 24px; font-style: italic;">"El masaje descontracturante es increíble. Se nota la profesionalidad y el trato humano desde el primer minuto. Totalmente recomendado."</p>
+        <p style="font-family: 'Cormorant Garamond', serif; font-size: 18px; color: var(--sage-dark);">Carlos R.</p>
+      </div>
+      <div class="fade-in d2" style="background: var(--cream-warm); padding: 40px; border: 1px solid var(--border-rose); border-radius: 8px;">
+        <div style="color: var(--rose); font-size: 24px; margin-bottom: 16px;">★★★★★</div>
+        <p style="font-size: 15px; line-height: 1.8; color: var(--text-mid); margin-bottom: 24px; font-style: italic;">"Hago las sesiones online y siento la misma conexión que si estuviera en el centro. Me ha ayudado mucho con mi ansiedad."</p>
+        <p style="font-family: 'Cormorant Garamond', serif; font-size: 18px; color: var(--sage-dark);">Laura M.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Separador espiritual -->
+<div class="section-ornament">✦ ✧ ✦</div>
+
+<!-- ══ FAQ ══ -->
+<section id="faq" style="padding: 100px 56px; background: var(--cream-warm);">
+  <div style="max-width: 800px; margin: 0 auto;">
+    <div class="fade-in" style="text-align: center; margin-bottom: 48px;">
+      <p class="section-eyebrow">Dudas frecuentes</p>
+      <h2 class="section-title">Preguntas <em>Frecuentes</em></h2>
+    </div>
+    
+    <div class="faq-list fade-in d1">
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">¿Qué ropa debo llevar a las sesiones de yoga?</button>
+        <div class="faq-answer">
+          <p>Te recomiendo llevar ropa cómoda y elástica que te permita moverte con libertad. No es necesario calzado, ya que practicamos descalzos sobre la esterilla.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">¿Cómo es la primera sesión de terapia holística?</button>
+        <div class="faq-answer">
+          <p>La primera sesión incluye una charla inicial para conocer tu estado actual, necesidades y objetivos. A partir de ahí, diseñamos un plan de trabajo personalizado combinando las técnicas más adecuadas para ti.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">¿Tienen bonos de descuento para varias sesiones?</button>
+        <div class="faq-answer">
+          <p>Sí, ofrezco bonos de 4 y 8 sesiones con un precio reducido, ideales para tratamientos continuados o para quienes desean mantener una práctica regular de yoga.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">¿Las sesiones online son igual de efectivas?</button>
+        <div class="faq-answer">
+          <p>¡Totalmente! Las sesiones online están adaptadas para que recibas la misma atención personalizada. Solo necesitas un espacio tranquilo en casa, buena conexión a internet y tu esterilla.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Separador espiritual -->
+<div class="section-ornament">✦ ॐ ✦</div>
+
+<!-- ══ CONTACTO ══ -->
+<section id="contacto">
+  <div class="contact-inner">
+    <div class="fade-in">
+      <p class="section-eyebrow">Contacto</p>
+      <h2 class="section-title">Hablemos sobre <em>tu bienestar</em></h2>
+      <p class="section-body">Estoy aquí para responder tus preguntas y ayudarte a encontrar el servicio que mejor se adapta a ti.</p>
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><div class="contact-label">Dirección</div><div class="contact-value">Calle de las Pedroñeras, 30<br>Hortaleza, Madrid</div></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg></div>
+          <div>
+            <div class="contact-label">Teléfono</div>
+            <div class="contact-value">
+              <a href="tel:+34611419266">611 419 266</a><br>
+              <a class="wa-link" href="https://wa.me/34611419266" target="_blank">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.99 2C6.479 2 2 6.478 2 11.99a9.97 9.97 0 001.367 5.072L2 22l5.087-1.337A9.946 9.946 0 0011.99 22c5.51 0 9.988-4.478 9.988-9.989C21.978 6.48 17.5 2 11.99 2z"/></svg>
+                Escribir por WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div><div class="contact-label">Email</div><div class="contact-value"><a href="/cdn-cgi/l/email-protection#0f7c666b616a4f67607b626e6663216a7c"><span class="__cf_email__" data-cfemail="e09389848e85a0888f948d81898cce8593">[email&#160;protected]</span></a></div></div>
+        </div>
+      </div>
+      <div class="social-links">
+        <a class="social-link" href="https://wa.me/34611419266" target="_blank" title="WhatsApp" aria-label="Contactar por WhatsApp">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.99 2C6.479 2 2 6.478 2 11.99a9.97 9.97 0 001.367 5.072L2 22l5.087-1.337A9.946 9.946 0 0011.99 22c5.51 0 9.988-4.478 9.988-9.989C21.978 6.48 17.5 2 11.99 2z"/></svg>
+        </a>
+        <a class="social-link" href="/cdn-cgi/l/email-protection#b0c3d9d4ded5f0d8dfc4ddd1d9dc9ed5c3" title="Email" aria-label="Enviar correo electrónico">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="fade-in d1">
+      <p class="section-eyebrow" style="margin-top:4px;">Escríbeme</p>
+
+      <form id="contactForm" name="contacto-yoluna" method="POST" data-netlify="true" netlify-honeypot="bot-field" style="margin-top:18px;display:flex;flex-direction:column;gap:16px;" onsubmit="handleFormSubmit(event)">
+        <input type="hidden" name="form-name" value="contacto-yoluna"/>
+        <p style="display:none;"><input name="bot-field"/></p>
+        <div class="form-row">
+          <div class="form-group"><label>Nombre</label><input type="text" name="nombre" placeholder="Tu nombre" required/></div>
+          <div class="form-group"><label>Teléfono</label><input type="tel" name="telefono" placeholder="Tu teléfono"/></div>
+        </div>
+        <div class="form-group"><label>Email</label><input type="email" name="email" placeholder="tu@email.com" required/></div>
+        <div class="form-group">
+          <label>Servicio de interés</label>
+          <select name="servicio">
+            <option value="">Selecciona un servicio</option>
+            <option>Quiromasaje</option>
+            <option>Terapias Holísticas</option>
+            <option>Yoga Terapéutico</option>
+            <option>Yoga para Principiantes</option>
+            <option>Meditación Guiada</option>
+            <option>Masaje Relajante</option>
+            <option>Masaje Descontracturante</option>
+            <option>Terapia Corporal</option>
+            <option>Sesión Online</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Mensaje</label><textarea name="mensaje" placeholder="Cuéntame qué necesitas..." required></textarea></div>
+        <button type="submit" class="btn-form">Enviar mensaje</button>
+        <p style="font-size:12px;color:var(--text-light);text-align:center;margin-top:4px;">O contáctame por WhatsApp al <a href="https://wa.me/34611419266" target="_blank" style="color:var(--sage-dark);">611 419 266</a></p>
+      </form>
+
+      <div id="formSuccess" style="display:none;text-align:center;padding:40px 20px;">
+        <div style="font-size:36px;margin-bottom:16px;">🌿</div>
+        <h3 style="font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:300;color:var(--sage-dark);margin-bottom:10px;">¡Mensaje enviado!</h3>
+        <p style="font-size:14px;color:var(--text-mid);line-height:1.7;">Gracias por escribirme. Me pondré en contacto contigo en breve.</p>
+        <button onclick="resetForm()" style="margin-top:24px;background:none;border:1px solid var(--sage);color:var(--sage-dark);font-family:'Jost',sans-serif;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;padding:12px 24px;cursor:pointer;">Enviar otro mensaje</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ MAPA ══ -->
+<div class="map-section">
+  <p class="map-label">Cómo llegar</p>
+  <div class="map-wrap">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3034.5!2d-3.6527!3d40.4739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422f3b6b6b6b6b%3A0x0!2sCalle+de+las+Pedroneras+30%2C+Hortaleza%2C+Madrid!5e0!3m2!1ses!2ses!4v1"
+      allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Ubicación Yoluna Hortaleza">
+    </iframe>
+  </div>
+  <a class="map-btn" href="https://maps.google.com/?q=Calle+de+las+Pedroneras+30+Hortaleza+Madrid" target="_blank">Abrir en Google Maps →</a>
+</div>
+</main>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="logo.png" alt="Yoluna Hortaleza">
+      <p>Espacio de yoga y terapias holísticas en Hortaleza, Madrid. Sesiones presenciales y online para tu bienestar integral.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Servicios</h4>
+      <ul>
+        <li><a href="#servicios">Quiromasaje</a></li>
+        <li><a href="#servicios">Terapias Holísticas</a></li>
+        <li><a href="#servicios">Yoga Terapéutico</a></li>
+        <li><a href="#servicios">Meditación Guiada</a></li>
+        <li><a href="#servicios">Sesiones Online</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <ul>
+        <li><a href="tel:+34611419266">611 419 266</a></li>
+        <li><a href="/cdn-cgi/l/email-protection#f18298959f94b1999e859c90989ddf9482"><span class="__cf_email__" data-cfemail="a5d6ccc1cbc0e5cdcad1c8c4ccc98bc0d6">[email&#160;protected]</span></a></li>
+        <li><a href="https://wa.me/34611419266">WhatsApp</a></li>
+        <li><a href="#contacto">Formulario</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Yoluna Hortaleza. Todos los derechos reservados.</span>
+    <span>Hortaleza · Madrid · Online</span>
+  </div>
+</footer>
+
+<!-- ══ WHATSAPP FLOTANTE ══ -->
+<a href="https://wa.me/34611419266" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+    <path d="M11.99 2C6.479 2 2 6.478 2 11.99a9.97 9.97 0 001.367 5.072L2 22l5.087-1.337A9.946 9.946 0 0011.99 22c5.51 0 9.988-4.478 9.988-9.989C21.978 6.48 17.5 2 11.99 2z"/>
+  </svg>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>

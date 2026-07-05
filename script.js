@@ -36,7 +36,7 @@ async function handleFormSubmit(e) {
   } catch (err) {
     btn.textContent = 'Enviar mensaje';
     btn.disabled = false;
-    alert('Ha ocurrido un error. Por favor contáctame por WhatsApp al 611 419 266');
+    alert('Ha ocurrido un error. Por favor contáctame por WhatsApp al 635 498 116');
   }
 }
 

@@ -14,8 +14,9 @@
   <meta property="og:type" content="website"/>
   <meta property="og:title" content="Yoluna Hortaleza — Yoga & Terapias Holísticas"/>
   <meta property="og:description" content="Espacio de bienestar para cuerpo y mente en Hortaleza, Madrid. Yoga, meditación y terapias holísticas."/>
-  <meta property="og:image" content="https://yoluna.com/og-image.jpg"/> <!-- Actualizar con URL real -->
-  <meta property="og:url" content="https://yoluna.com"/> <!-- Actualizar con URL real -->
+  <meta property="og:image" content="https://yoluna-hortaleza.netlify.app/logo.png"/>
+  <meta property="og:url" content="https://yoluna-hortaleza.netlify.app"/>
+  <meta property="og:locale" content="es_ES"/>
   
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>"/>
@@ -26,6 +27,64 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
   
   <link rel="stylesheet" href="styles.css"/>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Yoluna Hortaleza",
+    "description": "Espacio de bienestar en Hortaleza, Madrid. Yoga terapéutico, terapias holísticas, masajes relajantes y descontracturantes. Sesiones presenciales y online.",
+    "url": "https://yoluna-hortaleza.netlify.app",
+    "telephone": "+34635498116",
+    "email": "yo.lopez.martinez@gmail.com",
+    "image": "https://yoluna-hortaleza.netlify.app/logo.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Calle de las Pedroñeras, 30",
+      "addressLocality": "Madrid",
+      "addressRegion": "Madrid",
+      "postalCode": "28033",
+      "addressCountry": "ES"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 40.4739,
+      "longitude": -3.6527
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "09:00",
+      "closes": "20:00"
+    },
+    "areaServed": ["Madrid", "Online"],
+    "priceRange": "€€",
+    "sameAs": [
+      "https://wa.me/34635498116"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Servicios de bienestar",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Quiromasaje" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Terapias Holísticas" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Yoga Terapéutico" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Meditación Guiada" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Masaje Relajante" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Masaje Descontracturante" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Terapia Corporal" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sesiones Online" } }
+      ]
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "10",
+      "bestRating": "5"
+    }
+  }
+  </script>
 </head>
 <body>
 
@@ -99,7 +158,7 @@
 <section id="nosotros">
   <div class="about-inner">
     <div class="about-image-wrap fade-in">
-      <img src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?q=80&w=800&auto=format&fit=crop" alt="Profesora de yoga en postura de meditación" style="width:100%; display:block; aspect-ratio:3/4; object-fit:cover; border-radius: 4px;">
+      <img src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?q=80&w=800&auto=format&fit=crop" alt="Profesora de yoga en postura de meditación" loading="lazy" width="600" height="800" style="width:100%; display:block; aspect-ratio:3/4; object-fit:cover; border-radius: 4px;">
       <div class="about-badge"><span>Bienestar<br>integral</span></div>
     </div>
 
@@ -361,7 +420,7 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2025 Yoluna Hortaleza. Todos los derechos reservados.</span>
+    <span>© <span id="year"></span> Yoluna Hortaleza. Todos los derechos reservados.</span>
     <span>Hortaleza · Madrid · Online</span>
   </div>
 </footer>
@@ -374,6 +433,7 @@
   </svg>
 </a>
 
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 <script src="script.js"></script>
 </body>
 </html>

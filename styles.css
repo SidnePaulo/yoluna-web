@@ -114,9 +114,6 @@ nav.scrolled .nav-logo img {
 }
 .slide-2 {
   background-image: url('hero-lavanda.png');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
   animation-delay: 5s;
 }
 .slide-3 {

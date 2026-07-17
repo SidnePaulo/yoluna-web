@@ -50,6 +50,49 @@ function resetForm() {
   form.querySelector('button[type="submit"]').disabled = false;
 }
 
+// ══ AVISO DE COOKIES ══
+(function() {
+  const COOKIE_NAME = 'yoluna_cookies_ok';
+  const banner = document.getElementById('cookieConsent');
+
+  function getCookie(name) {
+    return document.cookie.split('; ').some(row => row.startsWith(name + '='));
+  }
+
+  function setCookie(name, days) {
+    const d = new Date();
+    d.setTime(d.getTime() + days * 86400000);
+    document.cookie = name + '=1; expires=' + d.toUTCString() + '; path=/; SameSite=Lax';
+  }
+
+  function acceptCookies() {
+    setCookie(COOKIE_NAME, 365);
+    banner.classList.remove('show');
+    gtag('consent', 'update', {
+      'analytics_storage': 'granted',
+      'ad_storage': 'granted',
+      'ad_user_data': 'granted',
+      'ad_personalization': 'granted'
+    });
+  }
+
+  function rejectCookies() {
+    setCookie(COOKIE_NAME, 1); /* 1 día para no molestar */
+    banner.classList.remove('show');
+    /* analytics_storage se queda en 'denied' — GA no recoge datos */
+  }
+
+  // Exponer globalmente
+  window.acceptCookies = acceptCookies;
+  window.rejectCookies = rejectCookies;
+
+  // Mostrar banner si no ha decidido aún
+  if (!getCookie(COOKIE_NAME)) {
+    // Esperar un toque para que aparezca suave
+    setTimeout(() => banner.classList.add('show'), 500);
+  }
+})();
+
 // FAQ Acordeón
 document.querySelectorAll('.faq-question').forEach(button => {
   button.addEventListener('click', () => {

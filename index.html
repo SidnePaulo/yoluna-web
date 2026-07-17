@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PD799NX9HR"></script>
+  <!-- Google Consent Mode — denegado hasta aceptar cookies -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied',
+      'functionality_storage': 'granted',
+      'personalization_storage': 'denied',
+      'security_storage': 'granted',
+      'wait_for_update': 500
+    });
     gtag('js', new Date());
     gtag('config', 'G-PD799NX9HR');
   </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PD799NX9HR"></script>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Yoga en Hortaleza | Yoluna — Terapias Holísticas & Bienestar en Madrid</title>
@@ -532,5 +543,15 @@
 
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 <script src="script.js"></script>
+
+<!-- ══ AVISO DE COOKIES ══ -->
+<div id="cookieConsent" class="cookie-consent">
+  <p>Esta web utiliza cookies de Google Analytics para mejorar tu experiencia. Al hacer clic en "Aceptar", aceptas su uso. Puedes rechazarlas sin problema. <a href="https://policies.google.com/privacy" target="_blank">Más información</a></p>
+  <div class="cookie-actions">
+    <button class="cookie-btn cookie-btn-reject" onclick="rejectCookies()">Rechazar</button>
+    <button class="cookie-btn cookie-btn-accept" onclick="acceptCookies()">Aceptar</button>
+  </div>
+</div>
+
 </body>
 </html>

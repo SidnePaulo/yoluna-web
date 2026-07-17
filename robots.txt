@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yoluna-hortaleza.netlify.app/sitemap.xml

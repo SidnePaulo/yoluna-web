@@ -109,15 +109,15 @@ nav.scrolled .nav-logo img {
   animation: crossfade 15s infinite; /* Aumentado a 15s para 3 imágenes (5s cada una) */
 }
 .slide-1 {
-  background-image: url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2000&auto=format&fit=crop');
+  background-image: url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=1600&auto=format&fit=crop');
   animation-delay: 0s;
 }
 .slide-2 {
-  background-image: url('hero-lavanda.png');
+  background-image: url('hero-lavanda.webp');
   animation-delay: 5s;
 }
 .slide-3 {
-  background-image: url('hero-playa.png');
+  background-image: url('hero-playa.webp');
   animation-delay: 10s;
 }
 .hero-overlay {
@@ -308,6 +308,10 @@ footer { background: var(--sage-deep); padding: 60px 56px 28px; }
   .nav-links, .nav-cta { display: none; }
   .hamburger { display: flex; }
   .hero-title { font-size: clamp(50px, 13vw, 72px); }
+  /* Imágenes del hero optimizadas para móvil (menor resolución = menos KB) */
+  .slide-1 { background-image: url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=800&auto=format&fit=crop'); }
+  .slide-2 { background-image: url('hero-lavanda-mobile.webp'); }
+  .slide-3 { background-image: url('hero-playa-mobile.webp'); }
   .intro-stat { min-width: 50%; border-bottom: 1px solid rgba(255,255,255,0.12); }
   .intro-stat:nth-child(odd) { border-right: 1px solid rgba(255,255,255,0.12); }
   .intro-stat:nth-last-child(-n+2) { border-bottom: none; }

@@ -67,10 +67,8 @@ nav.scrolled .nav-logo img {
 .nav-logo img {
   height: 88px;
   width: 88px;
-  object-fit: contain; /* Para que el logo no se corte */
-  border-radius: 50%;
-  mix-blend-mode: screen; /* Cambiado a screen por defecto */
-  filter: invert(1) contrast(1.2); /* Invertido por defecto para que sea blanco */
+  object-fit: contain; /* El logo (transparente) conserva su forma real al escalar */
+  filter: invert(1) contrast(1.2); /* Invertimos para que el trazo oscuro sea blanco */
   transition: transform 0.3s ease, height 0.5s ease, width 0.5s ease; /* Transiciones suaves */
 }
 nav.scrolled .nav-logo img {
@@ -268,9 +266,7 @@ footer { background: var(--sage-deep); padding: 60px 56px 28px; }
 .footer-brand img {
   height: 156px;
   width: 156px;
-  object-fit: contain;
-  border-radius: 50%;
-  mix-blend-mode: screen; /* Para fondos oscuros, quita el negro y deja el blanco */
+  object-fit: contain; /* El logo (transparente) conserva su forma real al escalar */
   filter: invert(1) contrast(1.2); /* Invertimos para que el trazo negro sea blanco */
 }
 .footer-brand p { font-size: 13px; line-height: 1.85; color: rgba(255,255,255,0.45); max-width: 280px; margin-top: 18px; }

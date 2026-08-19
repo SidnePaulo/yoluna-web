@@ -127,11 +127,10 @@ nav.scrolled .nav-logo img {
 }
 
 @keyframes crossfade {
-  0% { opacity: 1; }
-  25% { opacity: 1; } /* 1/3 del tiempo visible */
-  33% { opacity: 0; } /* Transición de salida */
-  92% { opacity: 0; } /* Oculto mientras las otras 2 se muestran */
-  100% { opacity: 1; } /* Transición de entrada */
+  0%      { opacity: 1; }
+  33.33%  { opacity: 1; }
+  33.34%  { opacity: 0; }
+  100%    { opacity: 0; }
 }
 
 /* Círculos decorativos femeninos */

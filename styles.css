@@ -50,23 +50,23 @@ body {
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   display: flex; align-items: center; justify-content: space-between;
-  padding: 0 56px; height: 96px; /* Altura equilibrada para logo de 88px */
+  padding: 0 56px; height: 84px; /* Altura equilibrada para logo de 76px */
   background: linear-gradient(135deg, var(--sage-deep) 0%, var(--sage-dark) 50%, var(--sage) 100%);
   transition: background 0.5s, box-shadow 0.5s, height 0.5s; /* Añadida transición de altura */
 }
 nav.scrolled {
   background: var(--sage-dark);
   box-shadow: 0 2px 20px rgba(50,77,56,0.3);
-  height: 76px; /* Hacemos la barra más pequeña al hacer scroll */
+  height: 66px; /* Hacemos la barra más pequeña al hacer scroll */
 }
 nav.scrolled .nav-logo img {
-  height: 70px; /* Reducimos el logo al hacer scroll */
-  width: 70px;
+  height: 60px; /* Reducimos el logo al hacer scroll */
+  width: 60px;
 }
 .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
 .nav-logo img {
-  height: 88px;
-  width: 88px;
+  height: 76px;
+  width: 76px;
   object-fit: contain; /* El logo (transparente) conserva su forma real al escalar */
   filter: invert(1) contrast(1.2); /* Invertimos para que el trazo oscuro sea blanco */
   transition: transform 0.3s ease, height 0.5s ease, width 0.5s ease; /* Transiciones suaves */
@@ -328,8 +328,8 @@ footer { background: var(--sage-deep); padding: 60px 56px 28px; }
 
 /* ══ RESPONSIVE ══ */
 @media (max-width: 768px) {
-  nav { padding: 0 20px; height: 84px; } /* Altura equilibrada para móvil */
-  .nav-logo img { height: 76px; width: 76px; }
+  nav { padding: 0 20px; height: 72px; } /* Altura equilibrada para móvil */
+  .nav-logo img { height: 64px; width: 64px; }
   .nav-links, .nav-cta { display: none; }
   .hamburger { display: flex; }
   .hero-title { font-size: clamp(50px, 13vw, 72px); }

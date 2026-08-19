@@ -50,7 +50,7 @@ body {
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   display: flex; align-items: center; justify-content: space-between;
-  padding: 0 56px; height: 96px; /* Altura equilibrada para logo de 80px */
+  padding: 0 56px; height: 96px; /* Altura equilibrada para logo de 88px */
   background: linear-gradient(135deg, var(--sage-deep) 0%, var(--sage-dark) 50%, var(--sage) 100%);
   transition: background 0.5s, box-shadow 0.5s, height 0.5s; /* Añadida transición de altura */
 }
@@ -60,13 +60,13 @@ nav.scrolled {
   height: 76px; /* Hacemos la barra más pequeña al hacer scroll */
 }
 nav.scrolled .nav-logo img {
-  height: 62px; /* Reducimos el logo al hacer scroll */
-  width: 62px;
+  height: 70px; /* Reducimos el logo al hacer scroll */
+  width: 70px;
 }
 .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
 .nav-logo img {
-  height: 80px;
-  width: 80px;
+  height: 88px;
+  width: 88px;
   object-fit: contain; /* Para que el logo no se corte */
   border-radius: 50%;
   mix-blend-mode: screen; /* Cambiado a screen por defecto */
@@ -333,7 +333,7 @@ footer { background: var(--sage-deep); padding: 60px 56px 28px; }
 /* ══ RESPONSIVE ══ */
 @media (max-width: 768px) {
   nav { padding: 0 20px; height: 84px; } /* Altura equilibrada para móvil */
-  .nav-logo img { height: 68px; width: 68px; }
+  .nav-logo img { height: 76px; width: 76px; }
   .nav-links, .nav-cta { display: none; }
   .hamburger { display: flex; }
   .hero-title { font-size: clamp(50px, 13vw, 72px); }

@@ -4,9 +4,50 @@ window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 60);
 });
 
-// Menú móvil
+// Menú móvil accesible
 function toggleMenu() {
-  document.getElementById('mobileMenu').classList.toggle('open');
+  const burger = document.getElementById('hamburger');
+  const menu = document.getElementById('mobileMenu');
+  const isOpen = menu.classList.toggle('open');
+
+  // Sincronizar estado con lectores de pantalla
+  burger.setAttribute('aria-expanded', String(isOpen));
+  burger.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
+
+  // Mover el foco al botón de cerrar al abrir (evita que el usuario
+  // quede tabulando por contenido oculto), y devolverlo al cerrar.
+  const closeBtn = document.querySelector('.mobile-close');
+  if (isOpen && closeBtn) {
+    closeBtn.focus();
+  } else if (!isOpen) {
+    burger.focus();
+  }
+}
+
+// Soporte de teclado: Enter y Espacio activan la hamburguesa
+document.getElementById('hamburger').addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' || e.key === ' ') {
+    e.preventDefault(); // evita el scroll con Espacio
+    toggleMenu();
+  }
+});
+
+// Escape cierra el menú móvil si está abierto
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    const menu = document.getElementById('mobileMenu');
+    if (menu.classList.contains('open')) toggleMenu();
+  }
+});
+
+// Los enlaces del menú cierran sin mover el foco (el navegador
+// navega a la sección destino; robar el foco interferiría).
+function closeMenu() {
+  const burger = document.getElementById('hamburger');
+  const menu = document.getElementById('mobileMenu');
+  menu.classList.remove('open');
+  burger.setAttribute('aria-expanded', 'false');
+  burger.setAttribute('aria-label', 'Abrir menú');
 }
 
 // Fade in al scroll
@@ -100,15 +141,17 @@ document.querySelectorAll('.faq-question').forEach(button => {
     const answer = button.nextElementSibling;
     const isActive = button.classList.contains('active');
     
-    // Cerrar todos los demás
+    // Cerrar todos los demás (y sincronizar su estado)
     document.querySelectorAll('.faq-question').forEach(otherBtn => {
       otherBtn.classList.remove('active');
       otherBtn.nextElementSibling.style.maxHeight = null;
+      otherBtn.setAttribute('aria-expanded', 'false');
     });
     
     if (!isActive) {
       button.classList.add('active');
       answer.style.maxHeight = answer.scrollHeight + "px";
+      button.setAttribute('aria-expanded', 'true');
     }
   });
 });

@@ -209,7 +209,7 @@
     <li><a href="#contacto">Contacto</a></li>
   </ul>
   <a class="nav-cta" href="#contacto">Reservar sesión</a>
-  <div class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Abrir menú" role="button" tabindex="0">
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Abrir menú" aria-expanded="false" role="button" tabindex="0">
     <span></span><span></span><span></span>
   </div>
 </nav>
@@ -217,10 +217,10 @@
 <!-- ══ MOBILE MENU ══ -->
 <div class="mobile-menu" id="mobileMenu">
   <button class="mobile-close" onclick="toggleMenu()" aria-label="Cerrar menú">✕</button>
-  <a href="#nosotros" onclick="toggleMenu()">Sobre mí</a>
-  <a href="#servicios" onclick="toggleMenu()">Servicios</a>
-  <a href="#contacto" onclick="toggleMenu()">Contacto</a>
-  <a href="#contacto" onclick="toggleMenu()" class="mobile-reservar">Reservar sesión</a>
+  <a href="#nosotros" onclick="closeMenu()">Sobre mí</a>
+  <a href="#servicios" onclick="closeMenu()">Servicios</a>
+  <a href="#contacto" onclick="closeMenu()">Contacto</a>
+  <a href="#contacto" onclick="closeMenu()" class="mobile-reservar">Reservar sesión</a>
 </div>
 
 <main>

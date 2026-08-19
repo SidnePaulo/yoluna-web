@@ -451,13 +451,13 @@
         <input type="hidden" name="form-name" value="contacto-yoluna"/>
         <p style="display:none;"><input name="bot-field"/></p>
         <div class="form-row">
-          <div class="form-group"><label>Nombre</label><input type="text" name="nombre" placeholder="Tu nombre" required/></div>
-          <div class="form-group"><label>Teléfono</label><input type="tel" name="telefono" placeholder="Tu teléfono"/></div>
+          <div class="form-group"><label for="nombre">Nombre</label><input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required/></div>
+          <div class="form-group"><label for="telefono">Teléfono</label><input type="tel" id="telefono" name="telefono" placeholder="Tu teléfono"/></div>
         </div>
-        <div class="form-group"><label>Email</label><input type="email" name="email" placeholder="tu@email.com" required/></div>
+        <div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="tu@email.com" required/></div>
         <div class="form-group">
-          <label>Servicio de interés</label>
-          <select name="servicio">
+          <label for="servicio">Servicio de interés</label>
+          <select id="servicio" name="servicio">
             <option value="">Selecciona un servicio</option>
             <option>Quiromasaje</option>
             <option>Terapias Holísticas</option>
@@ -470,7 +470,7 @@
             <option>Sesión Online</option>
           </select>
         </div>
-        <div class="form-group"><label>Mensaje</label><textarea name="mensaje" placeholder="Ej: Me gustaría reservar mi primera sesión gratuita, presencial u online..." required></textarea></div>
+        <div class="form-group"><label for="mensaje">Mensaje</label><textarea id="mensaje" name="mensaje" placeholder="Ej: Me gustaría reservar mi primera sesión gratuita, presencial u online..." required></textarea></div>
         <button type="submit" class="btn-form">Enviar mensaje</button>
         <p style="font-size:12px;color:var(--text-light);text-align:center;margin-top:4px;">O contáctame por WhatsApp al <a href="https://wa.me/34635498116" target="_blank" style="color:var(--sage-dark);">635 498 116</a></p>
       </form>

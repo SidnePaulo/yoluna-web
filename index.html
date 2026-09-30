@@ -5,11 +5,20 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    // Restore the persisted choice before the default, so a reload after
+    // acceptance does not send a denied first hit. A legacy value of "1"
+    // is ambiguous and stays denied until the visitor chooses again.
+    var persistedConsentChoice = (function() {
+      try {
+        var match = document.cookie.match(/(?:^|; )yoluna_cookies_ok=([^;]*)/);
+        return match ? decodeURIComponent(match[1]) : '';
+      } catch (e) { return ''; }
+    })();
     gtag('consent', 'default', {
       'ad_storage': 'denied',
       'ad_user_data': 'denied',
       'ad_personalization': 'denied',
-      'analytics_storage': 'denied',
+      'analytics_storage': persistedConsentChoice === 'accepted' ? 'granted' : 'denied',
       'functionality_storage': 'granted',
       'personalization_storage': 'denied',
       'security_storage': 'granted',
@@ -542,9 +551,6 @@
   </svg>
 </a>
 
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-<script src="script.js"></script>
-
 <!-- ══ AVISO DE COOKIES ══ -->
 <div id="cookieConsent" class="cookie-consent">
   <p>Esta web utiliza cookies de Google Analytics para mejorar tu experiencia. Al hacer clic en "Aceptar", aceptas su uso. Puedes rechazarlas sin problema. <a href="https://policies.google.com/privacy" target="_blank">Más información</a></p>
@@ -553,6 +559,9 @@
     <button class="cookie-btn cookie-btn-accept" onclick="acceptCookies()">Aceptar</button>
   </div>
 </div>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="script.js"></script>
 
 </body>
 </html>

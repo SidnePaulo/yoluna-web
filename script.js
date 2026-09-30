@@ -94,41 +94,66 @@ function resetForm() {
 // ══ AVISO DE COOKIES ══
 (function() {
   const COOKIE_NAME = 'yoluna_cookies_ok';
+  const ACCEPTED_VALUE = 'accepted';
+  const REJECTED_VALUE = 'rejected';
   const banner = document.getElementById('cookieConsent');
 
-  function getCookie(name) {
-    return document.cookie.split('; ').some(row => row.startsWith(name + '='));
+  function getDecision() {
+    // A malformed value (e.g. "%") must never abort the banner setup:
+    // treat it as undecided, same as the head snippet does.
+    try {
+      const match = document.cookie.match(new RegExp('(?:^|; )' + COOKIE_NAME + '=([^;]*)'));
+      return match ? decodeURIComponent(match[1]) : '';
+    } catch (e) { return ''; }
   }
 
-  function setCookie(name, days) {
+  function setDecision(value) {
     const d = new Date();
-    d.setTime(d.getTime() + days * 86400000);
-    document.cookie = name + '=1; expires=' + d.toUTCString() + '; path=/; SameSite=Lax';
+    d.setTime(d.getTime() + 365 * 86400000);
+    let cookie = COOKIE_NAME + '=' + encodeURIComponent(value) + '; expires=' + d.toUTCString() + '; path=/; SameSite=Lax';
+    // Secure only over HTTPS so loopback testing still persists the choice.
+    if (window.location && window.location.protocol === 'https:') cookie += '; Secure';
+    document.cookie = cookie;
+  }
+
+  function updateAnalytics(granted) {
+    // Consent change first, so a missing banner never blocks persistence.
+    if (typeof gtag === 'function') {
+      gtag('consent', 'update', {
+        'analytics_storage': granted ? 'granted' : 'denied'
+      });
+    }
+  }
+
+  function hideBanner() {
+    if (banner) banner.classList.remove('show');
   }
 
   function acceptCookies() {
-    setCookie(COOKIE_NAME, 365);
-    banner.classList.remove('show');
-    gtag('consent', 'update', {
-      'analytics_storage': 'granted',
-      'ad_storage': 'granted',
-      'ad_user_data': 'granted',
-      'ad_personalization': 'granted'
-    });
+    setDecision(ACCEPTED_VALUE);
+    updateAnalytics(true);
+    hideBanner();
   }
 
   function rejectCookies() {
-    setCookie(COOKIE_NAME, 1); /* 1 día para no molestar */
-    banner.classList.remove('show');
-    /* analytics_storage se queda en 'denied' — GA no recoge datos */
+    setDecision(REJECTED_VALUE);
+    updateAnalytics(false);
+    hideBanner();
   }
 
   // Exponer globalmente
   window.acceptCookies = acceptCookies;
   window.rejectCookies = rejectCookies;
 
-  // Mostrar banner si no ha decidido aún
-  if (!getCookie(COOKIE_NAME)) {
+  // Restore the persisted choice on load (the head snippet already applied
+  // it to the consent default; re-assert here for late-loading gtag).
+  // A legacy value of "1" is ambiguous: re-ask instead of granting.
+  const decision = getDecision();
+  if (decision === ACCEPTED_VALUE) {
+    updateAnalytics(true);
+  } else if (decision === REJECTED_VALUE) {
+    updateAnalytics(false);
+  } else if (banner) {
     // Esperar un toque para que aparezca suave
     setTimeout(() => banner.classList.add('show'), 500);
   }

@@ -197,7 +197,7 @@ nav.scrolled .nav-logo img {
 .services-header { text-align: center; margin-bottom: 60px; }
 .services-header .section-body { margin: 0 auto; text-align: center; }
 
-.services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 1px; background: var(--cream-deep); border: 1px solid var(--cream-deep); }
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1px; background: var(--cream-deep); border: 1px solid var(--cream-deep); }
 .service-card { background: var(--cream-warm); padding: 36px 30px; position: relative; overflow: hidden; transition: background 0.4s; }
 .service-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--sage-dark), var(--rose)); transform: scaleX(0); transform-origin: left; transition: transform 0.45s ease; }
 .service-card:hover { background: var(--cream-deep); }
@@ -205,6 +205,8 @@ nav.scrolled .nav-logo img {
 
 .service-number { font-family: 'Cormorant Garamond', serif; font-size: 44px; font-weight: 300; color: rgba(107,143,113,0.2); line-height: 1; margin-bottom: 14px; }
 .service-name { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 400; color: var(--text); margin-bottom: 10px; line-height: 1.2; }
+/* Intermediate hierarchy between service title and description */
+.service-sub { font-family: 'Cormorant Garamond', serif; font-size: 16px; font-weight: 400; font-style: italic; color: var(--sage-dark); line-height: 1.4; margin-bottom: 10px; }
 .service-desc { font-size: 13px; line-height: 1.85; color: var(--text-light); }
 .service-tag { display: inline-block; margin-top: 18px; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sage-dark); }
 
@@ -236,6 +238,7 @@ nav.scrolled .nav-logo img {
 .form-group { display: flex; flex-direction: column; gap: 7px; }
 .form-group label { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-light); }
 .form-group input, .form-group textarea, .form-group select { background: var(--cream-deep); border: 1px solid var(--border); color: var(--text); font-family: 'Jost', sans-serif; font-size: 14px; font-weight: 300; padding: 13px 16px; outline: none; transition: border-color 0.3s; resize: vertical; }
+.form-group select { width: 100%; min-width: 0; }
 .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--sage); }
 .form-group select option { background: var(--cream-deep); }
 .form-group textarea { min-height: 110px; }
